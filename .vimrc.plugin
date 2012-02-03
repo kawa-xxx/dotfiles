@@ -1,0 +1,15 @@
+"---Vundleの設定------------------------------------------------
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "quickrun.vim"
+Bundle "neocomplcache"
+Bundle "surround.vim"
+Bundle "kakkyz81/evervim"
+
+filetype plugin intent on
+
+
+

@@ -26,16 +26,14 @@ set title
 set showmatch
 "モードを表示する
 set showmode
-" ウインドウの幅:デフォルト80
-set columns=180
-" ウインドウの高さ：デフォルト25
-set lines=45
 " ヤンクでクリップボードと共有する
 set clipboard=unnamed
 "<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 
 "---GUI関連の設定-----------------------------------------------
+" ステータスラインを表示する
+set laststatus=2
 " ステータスラインに改行コードを表示する
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " ツールバーを非表示にする

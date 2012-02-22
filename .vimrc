@@ -54,6 +54,9 @@ highlight Pmenu ctermbg=Blue
 highlight PmenuSel ctermbg=DarkGray
 highlight PmenuSber ctermbg=Black
 
+" NERDTreeのペインを表示したり表示したりする
+nmap <Leader>p :NERDTreeToggle<CR>
+
 "---ファイル関連の設定------------------------------------------
 "バックアップファイルを作成しない
 set nobackup

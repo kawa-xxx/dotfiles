@@ -8,6 +8,7 @@ Bundle "quickrun.vim"
 Bundle "Shougo/neocomplcache"
 Bundle "surround.vim"
 Bundle "Shougo/unite.vim"
+Bundle "scrooloose/nerdtree"
 
 filetype plugin intent on
 

@@ -5,9 +5,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle "quickrun.vim"
-Bundle "neocomplcache"
+Bundle "Shougo/neocomplcache"
 Bundle "surround.vim"
-Bundle "kakkyz81/evervim"
+Bundle "Shougo/unite.vim"
 
 filetype plugin intent on
 

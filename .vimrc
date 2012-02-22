@@ -1,9 +1,9 @@
-"---Vundleの別プラグインファイルを読み込む
+"--Vundleの別プラグインファイルを読み込む
 if filereadable(expand('~/.vimrc.plugin'))
   source ~/.vimrc.plugin
 endif
 
-"---GUIに依存しない画面設定------------------------------------
+"---GUIに依存しない設定------------------------------------
 "
 "行番号を表示する
 set number
@@ -20,6 +20,8 @@ set ruler
 "不可視文字を表示する
 set list
 set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
+
 "タイトルを表示する
 set title
 "対応する｛を表示する
@@ -30,6 +32,12 @@ set showmode
 set clipboard=unnamed
 "<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+"シンタックスハイライトを有効にする
+syntax on
+"検索結果をハイライトする
+set hlsearch
+"検索結果ハイライトをEsc二回押しで消す
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 "---GUI関連の設定-----------------------------------------------
 " ステータスラインを表示する
@@ -38,6 +46,13 @@ set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " ツールバーを非表示にする
 set guioptions-=T
+
+" neocomplcacheを有効にする
+let g:neocomplcache_enable_at_startup=1
+" ポップアップメニューの色変更
+highlight Pmenu ctermbg=Blue
+highlight PmenuSel ctermbg=DarkGray
+highlight PmenuSber ctermbg=Black
 
 "---ファイル関連の設定------------------------------------------
 "バックアップファイルを作成しない

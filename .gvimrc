@@ -9,4 +9,5 @@ set columns=120
 "ウインドウの高さ
 set lines=45
 "カラースキーマの設定
-:colorscheme darkblue
+colorscheme darkblue
+

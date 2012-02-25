@@ -9,6 +9,7 @@ Bundle "Shougo/neocomplcache"
 Bundle "surround.vim"
 Bundle "Shougo/unite.vim"
 Bundle "scrooloose/nerdtree"
+Bundle "tomtom/tcomment_vim"
 
 filetype plugin intent on
 

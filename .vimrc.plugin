@@ -10,6 +10,11 @@ Bundle "surround.vim"
 Bundle "Shougo/unite.vim"
 Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
+Bundle "thinca/vim-ref"
+Bundle "vim-ruby/vim-ruby"
+
+" Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
+Bundle "tpope/vim-rails"
 
 filetype plugin intent on
 

@@ -54,6 +54,11 @@ highlight Pmenu ctermbg=Blue
 highlight PmenuSel ctermbg=DarkGray
 highlight PmenuSber ctermbg=Black
 
+" カレント行にアンダーラインを引く
+set cursorline
+highlight CusorLine cterm=underline ctermfg=NONE ctermbg=NONE
+highlight CusorLine gui=underline guifg=NONE guibg=NONE
+
 " NERDTreeのペインを表示したり表示したりする
 nmap <Leader>p :NERDTreeToggle<CR>
 

@@ -15,8 +15,6 @@ Bundle "vim-ruby/vim-ruby"
 
 " Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
 Bundle "tpope/vim-rails"
+Bundle "ujihisa/neco-look"
 
-filetype plugin intent on
-
-
-
+filetype plugin indent on

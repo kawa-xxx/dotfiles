@@ -66,6 +66,9 @@ augroup END
 highlight CusorLine cterm=underline ctermfg=NONE ctermbg=NONE
 highlight CusorLine gui=underline guifg=NONE guibg=NONE
 
+" 256色表示にする
+" colorscheme よりも先に指定剃る必要がある！
+set t_Co=256
 
 " NERDTreeのペインを表示したり表示したりする
 nmap <Leader>p :NERDTreeToggle<CR>

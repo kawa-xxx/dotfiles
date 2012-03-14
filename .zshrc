@@ -51,18 +51,28 @@ setopt auto_cd
 #########################
 # エイリアス関連
 #########################
-# gvimでMacVimが立ち上がるようする
-alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
-# vimでMacVim(ターミナル版)が立ち上がるようにする
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-# la で "ls -alG" が実行される用にする
-alias la='ls -alG'
+case "$OSTYPE" in
+  # Macでの設定
+  darwin*)
+    # gvimでMacVimが立ち上がるようする
+    alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
+    # vimでMacVim(ターミナル版)が立ち上がるようにする
+    alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    # ls コマンドをカラー表示する
+    alias ls='ls -G'
+    # la で "ls -alG" が実行される用にする
+    alias la='ls -alG'
+    ;;
+  # linuxでの設定
+  linux*)
+    alias ls='ls --color=auto'
+    alias la='ls -al --color=auto'
+    ;;
+esac
 
 #########################
 # カラー関連
 #########################
-# ls コマンドをカラー表示する
-alias ls='ls -G'
 # lsコマンドの補完候補にも色付き表示
 # ls出表示されるディレクトリの色変更（黒画面で見やすいように）
 export LSCOLORS=gxfxcxdxbxegedabagacad

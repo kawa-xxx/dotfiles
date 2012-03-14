@@ -114,4 +114,10 @@ setopt hist_reduce_blanks
 # その他
 #########################
 
+#rvm関係
+[[ -s "/Users/kawamura/.rvm/scripts/rvm" ]] && source "/Users/kawamura/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
+###PATHの追加###
+#アンドロイドの開発ツールのパス
+export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/tools:~/bin
+export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/platform-tools:~/bin

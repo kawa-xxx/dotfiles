@@ -1,18 +1,40 @@
 # 言語設定
 export LANG=ja_JP.UTF-8
+export LESSCHARSET=utf-8
+
+autoload colors
+colors
 
 # プロンプトの表示設定
-PROMPT="%1~/%% "
-ROMPT2="%_%% "
+#PROMPT="%1~/%% "
+PROMPT="[%{$fg_bold[cyan]%}INS%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%} "
+PROMPT2="%_%% "
 SPROMPT="% is corrent?[n,y,a,e]: "
+
+# プロンプトの先頭にviモードを表示する
+# http://memo.officebrook.net/20090226.html を少し改良
+function zle-line-init zle-keymap-select {
+case $KEYMAP in
+  vicmd)
+    PROMPT="[%{$fg_bold[red]%}NOR%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%} "
+    ;;
+  main|viins)
+    PROMPT="[%{$fg_bold[cyan]%}INS%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%} "
+    ;;
+esac
+zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 
 #########################
 # キーバインド
 #########################
 # viライク
-#bindkey -v
+bindkey -v
 # Emacsライク（デフォルト）
-bindkey -e
+#bindkey -e
 
 
 ########################
@@ -33,7 +55,8 @@ setopt auto_cd
 alias gvim='env LANG=ja_JP.UTF-8 open -a /Applications/MacVim.app/Contents/MacOS/MacVim "$@"'
 # vimでMacVim(ターミナル版)が立ち上がるようにする
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-
+# la で "ls -alG" が実行される用にする
+alias la='ls -alG'
 
 #########################
 # カラー関連

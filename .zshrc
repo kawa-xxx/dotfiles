@@ -2,8 +2,8 @@
 export LANG=ja_JP.UTF-8
 
 # プロンプトの表示設定
-PROMPT="%(3~,%-1~/.../%1~,%~)/%% "
-PROMPT2="%_%% "
+PROMPT="%1~/%% "
+ROMPT2="%_%% "
 SPROMPT="% is corrent?[n,y,a,e]: "
 
 #########################
@@ -12,7 +12,7 @@ SPROMPT="% is corrent?[n,y,a,e]: "
 # viライク
 #bindkey -v
 # Emacsライク（デフォルト）
-#bindkey -e
+bindkey -e
 
 
 ########################

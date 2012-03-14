@@ -1,0 +1,9 @@
+[user]
+	name = Tatsuya KAWAMURA
+	email = kawa.xxx@gmail.com
+[core]
+	editor = vim -c \"set fenc=utf-8\"
+[color]
+	ui = auto
+[alias]
+	st = status

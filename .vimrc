@@ -39,6 +39,11 @@ set hlsearch
 "検索結果ハイライトをEsc二回押しで消す
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" ターミナルでもマウスを使用できる用にする
+set mouse=a
+set guioptions+=a
+set ttymouse=xterm2
+
 "---GUI関連の設定-----------------------------------------------
 " ステータスラインを表示する
 set laststatus=2

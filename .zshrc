@@ -16,7 +16,7 @@ SPROMPT="% is corrent?[n,y,a,e]: "
 function zle-line-init zle-keymap-select {
 case $KEYMAP in
   vicmd)
-    PROMPT="[%{$fg_bold[red]%}NOR%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%}"
+    PROMPT="[%{$fg_bold[red]%}CMD%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%}"
     ;;
   main|viins)
     PROMPT="[%{$fg_bold[cyan]%}INS%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%}"

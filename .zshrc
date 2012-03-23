@@ -119,5 +119,6 @@ setopt hist_reduce_blanks
 
 ###PATHの追加###
 #アンドロイドの開発ツールのパス
-export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/tools:~/bin
-export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/platform-tools:~/bin
+export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/tools
+export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/platform-tools
+export PATH=$PATH:/Users/kawamura/eclipse/findbugs-2/bin

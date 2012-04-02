@@ -16,5 +16,8 @@ Bundle "vim-ruby/vim-ruby"
 " Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
 Bundle "tpope/vim-rails"
 Bundle "ujihisa/neco-look"
+Bundle "Townk/vim-autoclose"
 
-filetype plugin indent on
+filetyp plugin indent on
+
+let g:ref_refe_cmd = "/Users/kawamura/ruby-refm-1.9.2-dynamic-20110729/refe"

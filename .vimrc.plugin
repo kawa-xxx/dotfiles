@@ -13,6 +13,7 @@ Bundle "tomtom/tcomment_vim"
 Bundle "thinca/vim-ref"
 Bundle "vim-ruby/vim-ruby"
 Bundle "taq/vim-rspec"
+Bundle "astashov/vim-ruby-debugger"
 
 " Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
 Bundle "tpope/vim-rails"

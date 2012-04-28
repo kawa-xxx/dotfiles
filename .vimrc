@@ -44,6 +44,9 @@ set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
+" ESCを押すとIMEをオフにする
+set imdisable
+
 "---GUI関連の設定-----------------------------------------------
 " ステータスラインを表示する
 set laststatus=2
@@ -77,6 +80,12 @@ set t_Co=256
 
 " NERDTreeのペインを表示したり表示したりする
 nmap <Leader>p :NERDTreeToggle<CR>
+
+" カーソルの形状を変化させる ESCで抜けると画面が一瞬動くけど
+" Ctrl+cで抜けると動かない
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+inoremap <Esc> <Esc>gg`]`
 
 "---ファイル関連の設定------------------------------------------
 "バックアップファイルを作成しない

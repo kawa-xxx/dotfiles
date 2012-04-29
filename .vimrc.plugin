@@ -19,6 +19,8 @@ Bundle "astashov/vim-ruby-debugger"
 Bundle "tpope/vim-rails"
 Bundle "ujihisa/neco-look"
 Bundle "Townk/vim-autoclose"
+Bundle "JavaScript-syntax"
+Bundle "pangloss/vim-javascript"
 
 filetyp plugin indent on
 

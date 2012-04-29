@@ -91,6 +91,11 @@ inoremap <Esc> <Esc>gg`]`
 "バックアップファイルを作成しない
 set nobackup
 
+"---開発関連の設定----------------------------------------------
+" JavaScriptの設定
+autocmd FileType javascript :compiler gjslint
+autocmd QuickFixCmdPost make copen
+
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')
   syntax enable

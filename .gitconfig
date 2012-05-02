@@ -1,16 +1,18 @@
 [user]
-	name = Tatsuya KAWAMURA
-	email = kawa.xxx@gmail.com
+  name = Tatsuya KAWAMURA
+  email = kawa.xxx@gmail.com
 [core]
-	editor = vim -c \"set fenc=utf-8\"
-	excludesfile = /Users/kawamura/.gitignore_global
+  editor = vim -c \"set fenc=utf-8\"
+  excludesfile = /Users/kawamura/.gitignore_global
 [color]
-	ui = auto
+  ui = auto
 [alias]
-	st = status
+  st = status
+  graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

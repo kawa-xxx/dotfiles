@@ -62,6 +62,7 @@ case "$OSTYPE" in
     alias ls='ls -G'
     # la で "ls -alG" が実行される用にする
     alias la='ls -alG'
+    alias eq='earthquake'
     ;;
   # linuxでの設定
   linux*)

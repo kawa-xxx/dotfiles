@@ -19,6 +19,7 @@ Bundle "astashov/vim-ruby-debugger"
 Bundle "tpope/vim-rails"
 Bundle "ujihisa/neco-look"
 Bundle "Townk/vim-autoclose"
+Bundle "mrtazz/simplenote.vim"
 
 " html,css,js関連
 Bundle "JavaScript-syntax"

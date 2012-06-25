@@ -3,6 +3,11 @@ if filereadable(expand('~/.vimrc.plugin'))
   source ~/.vimrc.plugin
 endif
 
+" simplenote用の設定ファイル読み込み
+if filereadable(expand('~/.simplenoterc'))
+  source ~/.simplenoterc
+end
+
 "---GUIに依存しない設定------------------------------------
 "
 "行番号を表示する

@@ -63,6 +63,8 @@ case "$OSTYPE" in
     # la で "ls -alG" が実行される用にする
     alias la='ls -alG'
     alias eq='earthquake'
+    # rm で rmtrash が実行されるようにする
+    alias rm='rmtrash'
     ;;
   # linuxでの設定
   linux*)

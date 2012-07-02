@@ -10,6 +10,9 @@ Bundle "surround.vim"
 Bundle "Shougo/unite.vim"
 Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
+Bundle "Markdown"
+
+" Ruby 関連
 Bundle "thinca/vim-ref"
 Bundle "vim-ruby/vim-ruby"
 Bundle "taq/vim-rspec"

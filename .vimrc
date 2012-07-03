@@ -103,6 +103,10 @@ set noswapfile
 autocmd FileType javascript :compiler gjslint
 autocmd QuickFixCmdPost make copen
 
+" Markdownの設定
+let g:quickrun_config = {}
+let g:quickrun_config['markdown'] = { 'outputter' : 'browser' }
+
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')
   syntax enable

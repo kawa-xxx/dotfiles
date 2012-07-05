@@ -107,6 +107,8 @@ autocmd QuickFixCmdPost make copen
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = { 'outputter' : 'browser' }
 
+let g:quickrun_config['html'] = {'command' : 'cat', 'exec':['%c %s'], 'outputter' : 'browser'}
+
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')
   syntax enable

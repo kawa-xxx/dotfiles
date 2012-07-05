@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle "quickrun.vim"
+Bundle "thinca/vim-quickrun"
 Bundle "Shougo/neocomplcache"
 Bundle "surround.vim"
 Bundle "Shougo/unite.vim"

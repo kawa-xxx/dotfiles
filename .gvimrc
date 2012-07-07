@@ -11,3 +11,6 @@ set lines=45
 "カラースキーマの設定
 colorscheme darkblue
 
+" IMEが誤動作するので設定する
+set imdisable
+

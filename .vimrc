@@ -103,11 +103,19 @@ set noswapfile
 autocmd FileType javascript :compiler gjslint
 autocmd QuickFixCmdPost make copen
 
+"---QuickRunの設定----------------------------------------------
 " Markdownの設定
 let g:quickrun_config = {}
 let g:quickrun_config['markdown'] = { 'outputter' : 'browser' }
-
+" HTMLの設定
 let g:quickrun_config['html'] = {'command' : 'cat', 'exec':['%c %s'], 'outputter' : 'browser'}
+" Rspecの設定
+" specファイル全体を実行する場合
+let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+augroup RSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
 
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')

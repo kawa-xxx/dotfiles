@@ -12,6 +12,7 @@ Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
 Bundle "Markdown"
 Bundle "tyru/open-browser.vim"
+Bundle "kana/vim-fakeclip"
 
 " Ruby 関連
 Bundle "thinca/vim-ref"

@@ -22,7 +22,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nmap <CR> o<ESC>
 
 " 編集中のファイルをブラウザで開く
-nmap <Leader>w :! open %
+nmap <Leader>w :! open %<CR><CR>
 
 "---GUIに依存しない設定------------------------------------
 "行番号を表示する

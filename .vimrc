@@ -8,8 +8,23 @@ if filereadable(expand('~/.simplenoterc'))
   source ~/.simplenoterc
 end
 
+"---キーマップ設定-----------------------------------------
+"<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
+nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+
+" NERDTreeのペインを表示したり表示したりする
+nmap <Leader>p :NERDTreeToggle<CR>
+
+"検索結果ハイライトをEsc二回押しで消す
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" ノーマルモードでEnterキー入力で改行する
+nmap <CR> o<ESC>
+
+" 編集中のファイルをブラウザで開く
+nmap <Leader>w :! open %
+
 "---GUIに依存しない設定------------------------------------
-"
 "行番号を表示する
 set number
 "TAB幅を2にする
@@ -35,14 +50,10 @@ set showmatch
 set showmode
 " ヤンクでクリップボードと共有する
 set clipboard=unnamed
-"<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
-nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 "シンタックスハイライトを有効にする
 syntax on
 "検索結果をハイライトする
 set hlsearch
-"検索結果ハイライトをEsc二回押しで消す
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " ターミナルでもマウスを使用できる用にする
 set mouse=a
@@ -83,8 +94,6 @@ highlight CusorLine gui=underline guifg=NONE guibg=NONE
 " colorscheme よりも先に指定剃る必要がある！
 set t_Co=256
 
-" NERDTreeのペインを表示したり表示したりする
-nmap <Leader>p :NERDTreeToggle<CR>
 
 " カーソルの形状を変化させる ESCで抜けると画面が一瞬動くけど
 " Ctrl+cで抜けると動かない

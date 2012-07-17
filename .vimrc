@@ -68,6 +68,10 @@ set imdisable
 set laststatus=2
 " ステータスラインに改行コードを表示する
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+" vim-powerlineでフォントにパッチを当てないなら以下をコメントアウト
+let g:Powerline_symbols = 'fancy'
+
+
 " ツールバーを非表示にする
 set guioptions-=T
 

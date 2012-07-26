@@ -14,6 +14,10 @@ Bundle "Markdown"
 Bundle "tyru/open-browser.vim"
 Bundle "kana/vim-fakeclip"
 Bundle "Lokaltog/vim-powerline"
+Bundle "ujihisa/neco-look"
+Bundle "Townk/vim-autoclose"
+Bundle "mrtazz/simplenote.vim"
+Bundle "ShowMarks7"
 
 " Ruby 関連
 Bundle "thinca/vim-ref"
@@ -23,9 +27,6 @@ Bundle "astashov/vim-ruby-debugger"
 
 " Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
 Bundle "tpope/vim-rails"
-Bundle "ujihisa/neco-look"
-Bundle "Townk/vim-autoclose"
-Bundle "mrtazz/simplenote.vim"
 
 " html,css,js関連
 Bundle "JavaScript-syntax"

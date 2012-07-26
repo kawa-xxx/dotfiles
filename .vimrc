@@ -130,6 +130,16 @@ augroup RSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 
+"---ShowMark7の設定---------------------------------------------
+hi SingColumn ctermfg=white ctermbg=black cterm=none
+
+hi default ShowMarksHLl ctermfg=red ctermbg=black cterm=none
+hi default ShowMarksHLu ctermfg=red ctermbg=black cterm=none
+hi default ShowMarksHLo ctermfg=red ctermbg=black cterm=none
+hi default ShowMarksHLm ctermfg=red ctermbg=black cterm=none
+
+let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')
   syntax enable

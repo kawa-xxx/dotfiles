@@ -11,5 +11,5 @@ export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/tools
 export PATH=$PATH:/Users/kawamura/eclipse/android-sdk-mac_86/platform-tools
 export PATH=$PATH:/Users/kawamura/eclipse/findbugs-2/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 PATH=${HOME}/.cabal/bin:$PATH

@@ -18,6 +18,7 @@ Bundle "ujihisa/neco-look"
 Bundle "Townk/vim-autoclose"
 Bundle "mrtazz/simplenote.vim"
 Bundle "ShowMarks7"
+Bundle "tpope/vim-fugitive"
 
 " Ruby 関連
 Bundle "thinca/vim-ref"

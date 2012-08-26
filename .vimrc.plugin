@@ -20,6 +20,8 @@ Bundle "mrtazz/simplenote.vim"
 Bundle "ShowMarks7"
 Bundle "tpope/vim-fugitive"
 Bundle "vim-scripts/taglist.vim"
+Bundle "Shougo/vimshell"
+Bundle "Shougo/vimproc"
 
 " Ruby 関連
 Bundle "thinca/vim-ref"

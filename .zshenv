@@ -11,5 +11,8 @@ export PATH=$PATH:$HOME/eclipse/android-sdk-mac_86/tools
 export PATH=$PATH:$HOME/eclipse/android-sdk-mac_86/platform-tools
 export PATH=$PATH:$HOME/eclipse/findbugs-2/bin
 
+# wireshark
+export PATH=$PATH:/Applications/Wireshark.app/Contents/Resources/bin
+
 PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 PATH=${HOME}/.cabal/bin:$PATH

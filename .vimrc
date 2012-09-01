@@ -75,12 +75,6 @@ let g:Powerline_symbols = 'fancy'
 " ツールバーを非表示にする
 set guioptions-=T
 
-" neocomplcacheを有効にする
-let g:neocomplcache_enable_at_startup=1
-" ポップアップメニューの色変更
-highlight Pmenu ctermbg=Blue
-highlight PmenuSel ctermbg=DarkGray
-highlight PmenuSber ctermbg=Black
 
 " カレント行にアンダーラインを引く
 set cursorline
@@ -124,6 +118,14 @@ let Tlist_Show_One_File = 1 "現在編集中のソースのタグしか表示し
 let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim を閉じる
 "let Tlist_Enable_Fold_Column = 1 " 折り畳み
 map <silent> <leader>l :TlistToggle<CR>
+
+"---neocomplcacheの設定-----------------------------------------
+" neocomplcacheを有効にする
+let g:neocomplcache_enable_at_startup=1
+" ポップアップメニューの色変更
+"highlight Pmenu ctermbg=8
+"highlight PmenuSel ctermbg=1
+"highlight PmenuSber ctermbg=15
 
 "---QuickRunの設定----------------------------------------------
 " Markdownの設定

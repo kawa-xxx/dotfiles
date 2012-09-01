@@ -60,8 +60,8 @@ case "$OSTYPE" in
     alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     # ls コマンドをカラー表示する
     alias ls='ls -G'
-    # la で "ls -alG" が実行される用にする
-    alias la='ls -alG'
+    # la で "ls -ahlG" が実行されるようにする
+    alias la='ls -ahlG'
     alias eq='earthquake'
     # rm で rmtrash が実行されるようにする
     alias rm='rmtrash'

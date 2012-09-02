@@ -40,7 +40,7 @@ set ruler
 "不可視文字を表示する
 set list
 set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
-highlight SpecialKey term=underline ctermfg=darkgray guifg=darkgray
+hi SpecialKey term=underline ctermfg=darkgray guifg=darkgray
 
 "タイトルを表示する
 set title
@@ -85,8 +85,8 @@ augroup cch
   autocmd WinEnter,BufRead * set cursorline
 augroup END
 " アンダーラインのカラー設定
-highlight CusorLine cterm=underline ctermfg=NONE ctermbg=NONE
-highlight CusorLine gui=underline guifg=NONE guibg=NONE
+hi CusorLine cterm=underline ctermfg=NONE ctermbg=NONE
+hi CusorLine gui=underline guifg=NONE guibg=NONE
 
 " 256色表示にする
 " colorscheme よりも先に指定剃る必要がある！
@@ -123,9 +123,9 @@ map <silent> <leader>l :TlistToggle<CR>
 " neocomplcacheを有効にする
 let g:neocomplcache_enable_at_startup=1
 " ポップアップメニューの色変更
-"highlight Pmenu ctermbg=8
-"highlight PmenuSel ctermbg=1
-"highlight PmenuSber ctermbg=15
+hi Pmenu ctermbg=lightcyan ctermfg=black
+hi PmenuSel ctermbg=blue ctermfg=black
+hi PmenuSber ctermbg=lightgray
 
 "---QuickRunの設定----------------------------------------------
 " Markdownの設定

@@ -35,7 +35,8 @@ zle -N zle-keymap-select
 bindkey -v
 # Emacsライク（デフォルト）
 #bindkey -e
-
+# 入力文字列をスタックに積む
+bindkey -v '^Y' push-input
 
 ########################
 # 補完関係

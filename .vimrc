@@ -117,7 +117,7 @@ let Tlist_Use_Right_Window = 1 "右側に表示する
 let Tlist_Show_One_File = 1 "現在編集中のソースのタグしか表示しない
 let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim を閉じる
 "let Tlist_Enable_Fold_Column = 1 " 折り畳み
-map <silent> <leader>l :TlistToggle<CR>
+map <silent> <Leader>l :TlistToggle<CR>
 
 "---neocomplcacheの設定-----------------------------------------
 " neocomplcacheを有効にする
@@ -126,6 +126,23 @@ let g:neocomplcache_enable_at_startup=1
 hi Pmenu ctermbg=lightcyan ctermfg=black
 hi PmenuSel ctermbg=blue ctermfg=black
 hi PmenuSber ctermbg=lightgray
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 "---QuickRunの設定----------------------------------------------
 " Markdownの設定

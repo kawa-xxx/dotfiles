@@ -119,6 +119,19 @@ let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim �
 "let Tlist_Enable_Fold_Column = 1 " 折り畳み
 map <silent> <Leader>l :TlistToggle<CR>
 
+"---unite.vimの設定---------------------------------------------
+" バッファ一覧
+noremap <C-E><C-B> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-E><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+" 最近使ったファイルの一覧
+noremap <C-E><C-R> :Unite file_mru<CR>
+" レジスタ一覧
+noremap <C-E><C-Y> :Unite -buffer-name=register register<CR>
+" ファイルとバッファ
+noremap <C-E><C-U> :Unite buffer file file_mru<CR>
+" 全部
+noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 "---neocomplcacheの設定-----------------------------------------
 " neocomplcacheを有効にする
 let g:neocomplcache_enable_at_startup=1

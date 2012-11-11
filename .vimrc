@@ -165,7 +165,10 @@ let g:quickrun_config['markdown'] = { 'outputter' : 'browser' }
 let g:quickrun_config['html'] = {'command' : 'cat', 'exec':['%c %s'], 'outputter' : 'browser'}
 " Rspecの設定
 " specファイル全体を実行する場合
-let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+let g:quickrun_config['ruby.rspec'] = {
+                \ 'command': 'rspec',
+                \ 'outputter/buffer/filetype' : 'rspec-result'
+                \ }
 augroup RSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec

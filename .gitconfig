@@ -1,13 +1,17 @@
 [user]
-	name = Tatsuya KAWAMURA
-	email = kawa.xxx@gmail.com
+  name = Tatsuya KAWAMURA
+  email = kawa.xxx@gmail.com
 [core]
   editor = vim -c \"set fenc=utf-8\"
-  excludesfile = /Users/kawamura/.gitignore_global
+  excludesfile = ~/.gitignore
 [color]
   ui = auto
 [alias]
   st = status
+  df = diff
+  co = checkout
+  cm = commit
+  b = branch
   graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 
 [difftool "sourcetree"]

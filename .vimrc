@@ -3,24 +3,15 @@ if filereadable(expand('~/.vimrc.plugin'))
   source ~/.vimrc.plugin
 endif
 
-" simplenote用の設定ファイル読み込み
-if filereadable(expand('~/.simplenoterc'))
-  source ~/.simplenoterc
-end
-
 "---キーマップ設定-----------------------------------------
 "<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
-
 " NERDTreeのペインを表示したり表示したりする
 nmap <Leader>p :NERDTreeToggle<CR>
-
 "検索結果ハイライトをEsc二回押しで消す
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
 " ノーマルモードでEnterキー入力で改行する
 nmap <CR> o<ESC>
-
 " 編集中のファイルをブラウザで開く
 nmap <Leader>w :! open %<CR><CR>
 
@@ -132,6 +123,7 @@ noremap <C-E><C-Y> :Unite -buffer-name=register register<CR>
 noremap <C-E><C-U> :Unite buffer file file_mru<CR>
 " 全部
 noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
 "---neocomplcacheの設定-----------------------------------------
 " neocomplcacheを有効にする
 let g:neocomplcache_enable_at_startup=1

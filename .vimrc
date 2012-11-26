@@ -152,6 +152,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 "---QuickRunの設定----------------------------------------------
 " Markdownの設定
 let g:quickrun_config = {}
+let g:quickrun_config._ = {'runner' : 'vimproc'}
 let g:quickrun_config['markdown'] = { 'outputter' : 'browser' }
 " HTMLの設定
 let g:quickrun_config['html'] = {'command' : 'cat', 'exec':['%c %s'], 'outputter' : 'browser'}

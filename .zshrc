@@ -8,8 +8,30 @@ colors
 # プロンプトの表示設定
 #PROMPT="%1~/%% "
 PROMPT="[%{$fg_bold[cyan]%}INS%{$reset_color%}] %{$fg_bold[white]%}% %1~ %% %{$reset_color%}"
-PROMPT2="%_%% "
-SPROMPT="% is corrent?[n,y,a,e]: "
+#PROMPT2="%_%% "
+#SPROMPT="% is corrent?[n,y,a,e]: "
+
+# プロンプトの右側にVCSの情報を表示する
+# http://mollifier.hatenablog.com/entry/20090814/p1 を参考にした
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+
+autoload -Uz is-at-least
+if is-at-least 4.3.10; then
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr "+"    # 変更をインデックスに追加した時に表示される
+  zstyle ':vcs_info:git:*' unstagedstr "-"  # 変更をまだインデックスに追加していないときに表示される
+  zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
+  zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
+fi
+
+precmd(){
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+RPROMPT="%1(v|%F{green}%1v%f|)"
 
 # プロンプトの先頭にviモードを表示する
 # http://memo.officebrook.net/20090226.html を少し改良

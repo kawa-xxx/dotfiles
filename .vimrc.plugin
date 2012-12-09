@@ -1,7 +1,7 @@
 "---Vundleの設定------------------------------------------------
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle.git
 call vundle#rc()
 
 " 補完関連

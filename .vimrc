@@ -4,6 +4,9 @@ if filereadable(expand('~/.vimrc.plugin'))
 endif
 
 "---キーマップ設定-----------------------------------------
+" <Leader>キーを定義する
+" IMEの設定によっては\がエンマークになっている可能性があるので注意
+let mapleader = '\'
 "<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
 nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 " NERDTreeのペインを表示したり表示したりする
@@ -28,6 +31,8 @@ set expandtab
 set autoindent
 "ルーラを表示する
 set ruler
+" エンコーディングの設定
+set encoding=utf-8
 "不可視文字を表示する
 set list
 set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
@@ -61,12 +66,8 @@ set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " vim-powerlineでフォントにパッチを当てないなら以下をコメントアウト
 let g:Powerline_symbols = 'fancy'
-
-
 " ツールバーを非表示にする
 set guioptions-=T
-
-
 " カレント行にアンダーラインを引く
 set cursorline
 " カレントウインドウにのみアンダーラインを引く
@@ -80,12 +81,11 @@ hi CusorLine cterm=underline ctermfg=NONE ctermbg=NONE
 hi CusorLine gui=underline guifg=NONE guibg=NONE
 
 " 256色表示にする
-" colorscheme よりも先に指定剃る必要がある！
+" colorscheme よりも先に指定する必要がある！
 set t_Co=256
 
-
 " カーソルの形状を変化させる ESCで抜けると画面が一瞬動くけど
-" Ctrl+cで抜けると動かない
+" Ctrl+cで抜けると動かない(tmux上のVimだと動作しない
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 inoremap <Esc> <Esc>gg`]`

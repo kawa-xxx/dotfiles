@@ -39,6 +39,7 @@ Bundle "ruby-matchit"
 
 " Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
 Bundle "tpope/vim-rails"
+Bundle "tpope/vim-haml"
 
 " html,css,js関連
 Bundle "JavaScript-syntax"

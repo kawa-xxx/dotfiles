@@ -252,6 +252,10 @@ case "$OSTYPE" in
     alias la='ls -al --color=auto'
     ;;
 esac
+# すべてのOS共通のエイリアス
+alias v=vim
+alias g=git
+alias r=ralis
 
 #########################
 # カラー関連

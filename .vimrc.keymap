@@ -1,0 +1,56 @@
+"---基本的なkeymap設定-----------------------------------------
+" <Leader>キーを定義する
+" IMEの設定によっては\がエンマークになっている可能性があるので注意
+let mapleader = '\'
+"<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
+nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
+" NERDTreeのペインを表示したり表示したりする
+nmap <Leader>p :NERDTreeToggle<CR>
+"検索結果ハイライトをEsc二回押しで消す
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" ノーマルモードでEnterキー入力で改行する
+nmap <CR> o<ESC>
+" 編集中のファイルをブラウザで開く
+nmap <Leader>w :! open %<CR><CR>
+
+"---unite.vimのkeymap設定---------------------------------------
+" バッファ一覧
+noremap <C-E><C-B> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-E><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+" 最近使ったファイルの一覧
+noremap <C-E><C-R> :Unite file_mru<CR>
+" レジスタ一覧
+noremap <C-E><C-Y> :Unite -buffer-name=register register<CR>
+" ファイルとバッファ
+noremap <C-E><C-U> :Unite buffer file file_mru<CR>
+" 全部
+noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
+"---taglistのkeymap設定------------------------------------------
+map <silent> <Leader>l :TlistToggle<CR>
+
+"---vim-browsereload-macのkeymap設定------------------------------
+let g:returnApp = "iTerm"
+nmap <Space>bc :ChromeReloadStart<CR>
+nmap <Space>bC :ChromeReloadStop<CR>
+nmap <Space>bf :FirefoxReloadStart<CR>
+nmap <Space>bF :FirefoxReloadStop<CR>
+nmap <Space>bs :SafariReloadStart<CR>
+nmap <Space>bS :SafariReloadStop<CR>
+nmap <Space>bo :OperaReloadStart<CR>
+nmap <Space>bO :OperaReloadStop<CR>
+nmap <Space>ba :AllBrowserReloadStart<CR>
+nmap <Space>bA :AllBrowserReloadStop<CR>
+
+"---ヤンクしたデータをクリップボードと共有する----------------
+if has('mac') && !has('gui')
+    nnoremap <silent> <Space>y :.w !pbcopy<CR><CR>
+    vnoremap <silent> <Space>y :w !pbcopy<CR><CR>
+    nnoremap <silent> <Space>p :r !pbpaste<CR>
+    vnoremap <silent> <Space>p :r !pbpaste<CR>
+" GVim(Mac & Win)
+else
+    noremap <Space>y "+y
+    noremap <Space>p "+p
+endif

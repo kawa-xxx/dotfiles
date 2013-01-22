@@ -3,20 +3,10 @@ if filereadable(expand('~/.vimrc.plugin'))
   source ~/.vimrc.plugin
 endif
 
-"---キーマップ設定-----------------------------------------
-" <Leader>キーを定義する
-" IMEの設定によっては\がエンマークになっている可能性があるので注意
-let mapleader = '\'
-"<F6>  文頭にタイムスタンプを挿入してinsertモードへ移行 ----
-nmap <F6> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
-" NERDTreeのペインを表示したり表示したりする
-nmap <Leader>p :NERDTreeToggle<CR>
-"検索結果ハイライトをEsc二回押しで消す
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" ノーマルモードでEnterキー入力で改行する
-nmap <CR> o<ESC>
-" 編集中のファイルをブラウザで開く
-nmap <Leader>w :! open %<CR><CR>
+"--keymapファイルを読み込む
+if filereadable(expand('~/.vimrc.keymap'))
+  source ~/.vimrc.keymap
+endif
 
 "---GUIに依存しない設定------------------------------------
 "行番号を表示する
@@ -101,28 +91,13 @@ set noswapfile
 autocmd FileType javascript :compiler gjslint
 autocmd QuickFixCmdPost make copen
 
-" taglist
+"---taglist-----------------------------------------------------
 set tags=tags
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_Use_Right_Window = 1 "右側に表示する
 let Tlist_Show_One_File = 1 "現在編集中のソースのタグしか表示しない
 let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim を閉じる
 "let Tlist_Enable_Fold_Column = 1 " 折り畳み
-map <silent> <Leader>l :TlistToggle<CR>
-
-"---unite.vimの設定---------------------------------------------
-" バッファ一覧
-noremap <C-E><C-B> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-E><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
-" 最近使ったファイルの一覧
-noremap <C-E><C-R> :Unite file_mru<CR>
-" レジスタ一覧
-noremap <C-E><C-Y> :Unite -buffer-name=register register<CR>
-" ファイルとバッファ
-noremap <C-E><C-U> :Unite buffer file file_mru<CR>
-" 全部
-noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
 
 "---neocomplcacheの設定-----------------------------------------
 " neocomplcacheを有効にする
@@ -167,19 +142,6 @@ augroup RSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 
-" ---vim-browsereload-macの設定---------------------------------
-let g:returnApp = "iTerm"
-nmap <Space>bc :ChromeReloadStart<CR>
-nmap <Space>bC :ChromeReloadStop<CR>
-nmap <Space>bf :FirefoxReloadStart<CR>
-nmap <Space>bF :FirefoxReloadStop<CR>
-nmap <Space>bs :SafariReloadStart<CR>
-nmap <Space>bS :SafariReloadStop<CR>
-nmap <Space>bo :OperaReloadStart<CR>
-nmap <Space>bO :OperaReloadStop<CR>
-nmap <Space>ba :AllBrowserReloadStart<CR>
-nmap <Space>bA :AllBrowserReloadStop<CR>
-
 "---ShowMark7の設定---------------------------------------------
 hi SingColumn ctermfg=white ctermbg=black cterm=none
 
@@ -202,7 +164,6 @@ augroup BinaryXXD
   autocmd BufWritePost * set nomod | endif
 augroup END
 
-
 "---全角スペースを視覚化----------------------------------------
 if has('syntax')
   syntax enable
@@ -215,7 +176,6 @@ if has('syntax')
     autocmd BufEnter * call ActivateInvisibleIndicator()
   augroup END
 endif
-
 
 "---<TAB>で補完-------------------------------------------------
 " {{{ Autocompletion using the TAB key
@@ -237,20 +197,6 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " }}} Autocompletion using the TAB key
 "---<TAB>で補完終了--------------------------------------------
-
-
-"ヤンクしたデータをクリップボードと共有する----------------
-if has('mac') && !has('gui')
-    nnoremap <silent> <Space>y :.w !pbcopy<CR><CR>
-    vnoremap <silent> <Space>y :w !pbcopy<CR><CR>
-    nnoremap <silent> <Space>p :r !pbpaste<CR>
-    vnoremap <silent> <Space>p :r !pbpaste<CR>
-" GVim(Mac & Win)
-else
-    noremap <Space>y "+y
-    noremap <Space>p "+p
-endif
-
 
 " 文字コードの自動認識------------------------------------------------
 if &encoding !=# 'utf-8'
@@ -310,4 +256,3 @@ if exists('&ambiwidth')
 endif
 
 " 文字コードの自動認識終わり----------------------------------------------
-

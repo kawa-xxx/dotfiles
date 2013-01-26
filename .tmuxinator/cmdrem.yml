@@ -1,0 +1,13 @@
+# ~/.tmuxinator/cmdrem.yml
+
+project_name: cmdrem
+project_root: ~/project/rails/cmdrem
+rvm: 1.9.3@cmdrem
+tabs:
+  - editor: vim
+  - server:
+      layout: tiled
+      panes:
+        - rails s
+        - tail -f logs/development.log
+        - rails c

@@ -1,4 +1,5 @@
 # usage
+- install zsh, git, rvm, tmux
 - git clone git@github.com:kawa-xxx/dotfiles.git
 - git submodule init
 - git submodule update
@@ -8,3 +9,4 @@
 - make -f make_mac.mak
 - patched font
 -- https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+- gem install tmuxinator

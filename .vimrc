@@ -73,6 +73,7 @@ hi CusorLine gui=underline guifg=NONE guibg=NONE
 " 256色表示にする
 " colorscheme よりも先に指定する必要がある！
 set t_Co=256
+colorscheme desert
 
 " カーソルの形状を変化させる ESCで抜けると画面が一瞬動くけど
 " Ctrl+cで抜けると動かない(tmux上のVimだと動作しない
@@ -102,10 +103,6 @@ let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim �
 "---neocomplcacheの設定-----------------------------------------
 " neocomplcacheを有効にする
 let g:neocomplcache_enable_at_startup=1
-" ポップアップメニューの色変更
-hi Pmenu ctermbg=lightcyan ctermfg=black
-hi PmenuSel ctermbg=blue ctermfg=black
-hi PmenuSber ctermbg=lightgray
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS

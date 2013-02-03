@@ -6,19 +6,23 @@ call vundle#rc()
 
 " 補完関連
 Bundle "Shougo/neocomplcache"
+Bundle "Shougo/neocomplcache-rsense"
 Bundle "ujihisa/neco-look"
+
+" unite関連
+Bundle "Shougo/unite.vim"
+Bundle "tacroe/unite-mark"
+Bundle "ujihisa/unite-rake"
+Bundle "basyura/unite-rails"
 
 " 開発環境関連
 Bundle "Shougo/vimshell"
 Bundle "Shougo/vimproc"
-Bundle "Shougo/unite.vim"
-Bundle "tacroe/unite-mark"
 Bundle "thinca/vim-quickrun"
 Bundle "vim-scripts/taglist.vim"
 Bundle "scrooloose/nerdtree"
 Bundle "tyru/open-browser.vim"
 Bundle "ShowMarks7"
-
 Bundle "surround.vim"
 Bundle "tomtom/tcomment_vim"
 Bundle "Markdown"
@@ -28,16 +32,13 @@ Bundle "mrtazz/simplenote.vim"
 Bundle "tpope/vim-fugitive"
 Bundle "kana/vim-fakeclip"
 
-
 " Ruby 関連
 Bundle "thinca/vim-ref"
 Bundle "vim-ruby/vim-ruby"
 Bundle "taq/vim-rspec"
 Bundle "astashov/vim-ruby-debugger"
 Bundle "ruby-matchit"
-"Bundle "vim-rsense"
-
-" Bundle "rails.vim" こっちだとautocommandが無いって言われるのでgithubの方で
+Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-rails"
 Bundle "tpope/vim-haml"
 
@@ -54,4 +55,5 @@ Bundle "tell-k/vim-browsereload-mac"
 
 filetyp plugin indent on
 
-let g:ref_refe_cmd = "/Users/kawamura/ruby-refm-1.9.2-dynamic-20110729/refe"
+let g:ref_refe_cmd = "rurema"
+let g:ref_refe_version = 2

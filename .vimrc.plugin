@@ -1,8 +1,13 @@
 "---Vundleの設定------------------------------------------------
 filetype off
 
-set rtp+=~/.vim/bundle/vundle.git
-call vundle#rc()
+if has("win32") || has("win64")
+  set rtp+=~/vimfiles/vundle.git
+  call vundle#rc('~/vinfiles/bundle')
+else
+  set rtp+=~/.vim/bundle/vundle.git
+  call vundle#rc()
+endif
 
 " 補完関連
 Bundle "Shougo/neocomplcache"

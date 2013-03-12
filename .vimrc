@@ -1,11 +1,24 @@
-"--Vundleの別プラグインファイルを読み込む
-if filereadable(expand('~/.vimrc.plugin'))
-  source ~/.vimrc.plugin
-endif
+" OSによって読み込む設定ファイルを変更する
+if has('win32') || has('win64')
+  "--Vundleの別プラグインファイルを読み込む
+  if filereadable(expand('~\_vimrc.plugin'))
+    source ~\_vimrc.plugin
+  endif
 
-"--keymapファイルを読み込む
-if filereadable(expand('~/.vimrc.keymap'))
-  source ~/.vimrc.keymap
+  "--keymapファイルを読み込む
+  if filereadable(expand('~\_vimrc.keymap'))
+    source ~\_vimrc.keymap
+  endif
+else " macやLinuxの場合-----------------------
+  "--Vundleの別プラグインファイルを読み込む
+  if filereadable(expand('~/.vimrc.plugin'))
+    source ~/.vimrc.plugin
+  endif
+
+  "--keymapファイルを読み込む
+  if filereadable(expand('~/.vimrc.keymap'))
+    source ~/.vimrc.keymap
+  endif
 endif
 
 "---GUIに依存しない設定------------------------------------
@@ -21,11 +34,20 @@ set expandtab
 set autoindent
 "ルーラを表示する
 set ruler
-" エンコーディングの設定
-set encoding=utf-8
 "不可視文字を表示する
 set list
-set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+
+" MacやLinuxはUTF-8、WindowsはSJIS
+" エンコーディングの設定
+if has('win32') || has('win64')
+  set encoding=cp932
+  set listchars=tab:>-,trail:-,eol:$,extends:>,precedes:<,nbsp:%
+else " MacやLinux
+  set encoding=utf-8
+  set listchars=tab:≫-,trail:-,eol:$,extends:≫,precedes:≪,nbsp:%
+  " ESCを押すとIMEをオフにする winだと日本語入力が不可能になる？
+  set imdisable
+end
 hi SpecialKey term=underline ctermfg=darkgray guifg=darkgray
 
 "タイトルを表示する
@@ -40,14 +62,11 @@ set clipboard=unnamed
 syntax on
 "検索結果をハイライトする
 set hlsearch
-
 " ターミナルでもマウスを使用できる用にする
 set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
-" ESCを押すとIMEをオフにする
-set imdisable
 
 "---GUI関連の設定-----------------------------------------------
 " ステータスラインを表示する
@@ -58,6 +77,8 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 let g:Powerline_symbols = 'fancy'
 " ツールバーを非表示にする
 set guioptions-=T
+" メニューを非表示にする
+set guioptions-=m
 " カレント行にアンダーラインを引く
 set cursorline
 " カレントウインドウにのみアンダーラインを引く

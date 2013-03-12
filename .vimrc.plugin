@@ -2,8 +2,8 @@
 filetype off
 
 if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle.git
-  call vundle#rc('~/vinfiles/bundle')
+  set rtp+=~\vimfiles\bundle\vundle.git
+  call vundle#rc('~\vimfiles\bundle\vundle.git')
 else
   set rtp+=~/.vim/bundle/vundle.git
   call vundle#rc()

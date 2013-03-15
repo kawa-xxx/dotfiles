@@ -21,3 +21,7 @@ if has('multi_byte_ime')
   highlight Cursor guifg=NONE guibg=Green
   highlight CursorIM guifg=NONE guibg=Purple
 endif
+
+" フォントの設定
+set guifont=Ricty_Diminished:h12:cSHIFTJIS
+set guifontwide=Ricty_Diminished:h12:cSHIFTJIS

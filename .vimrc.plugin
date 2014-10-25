@@ -56,6 +56,12 @@ Bundle "othree/html5.vim"
 Bundle "hail2u/vim-css3-syntax"
 "Bundle "css_color.vim" "これを入れるとhtmlファイルの表示がすごく遅くなった
 
+" haskell
+Bundle "dag/vim2hs"
+Bundle "eagletmt/ghcmod-vim"
+Bundle "eagletmt/neco-ghc"
+Bundle "eagletmt/unite-haddock"
+
 " Macでしか動作しないもの
 Bundle "tell-k/vim-browsereload-mac"
 

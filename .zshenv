@@ -1,7 +1,5 @@
 #パス関連の設定
 #
-#rvm関係
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 #tmuxinator関連
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
@@ -32,3 +30,6 @@ export PATH="$HOME/perl5/bin:$PATH";
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"

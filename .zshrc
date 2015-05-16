@@ -305,3 +305,20 @@ export DOCKER_TLS_VERIFY=1
 #########################
 # その他
 #########################
+
+#########################
+# Visual Studio Code
+#########################
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
+
+export MONO_GAC_PREFIX="/usr/local"
+export MONO_MANAGED_WATCHER=false
+source dnvm.sh

@@ -1,7 +1,36 @@
-"--Vundleの別プラグインファイルを読み込む
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/kawa_xxx/.vim/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/kawa_xxx/.vim/dein')
+
+"--別プラグインファイルを読み込む
 if filereadable(expand('~/.vimrc.plugin'))
   source ~/.vimrc.plugin
 endif
+
+" You can specify revision/branch/tag.
+call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
 
 "--keymapファイルを読み込む
 if filereadable(expand('~/.vimrc.keymap'))
@@ -96,6 +125,14 @@ set noswapfile
 " JavaScriptの設定
 autocmd FileType javascript :compiler gjslint
 autocmd QuickFixCmdPost make copen
+
+autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
+
+let g:node_usejscomplete = 1
 
 "---taglist-----------------------------------------------------
 set tags=tags

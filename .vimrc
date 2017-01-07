@@ -69,14 +69,14 @@ set clipboard=unnamed
 syntax on
 "検索結果をハイライトする
 set hlsearch
-
 " ターミナルでもマウスを使用できる用にする
 set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
-
 " ESCを押すとIMEをオフにする
 set imdisable
+" undo ディレクトリを設定する
+set undodir=~/var/vim/
 
 "---GUI関連の設定-----------------------------------------------
 " ステータスラインを表示する

@@ -320,5 +320,15 @@ code () {
 }
 
 export MONO_GAC_PREFIX="/usr/local"
+source /Users/kawa_xxx/.dnx/dnvm/dnvm.sh
 export MONO_MANAGED_WATCHER=false
-source dnvm.sh
+
+
+#########################
+# Python
+#########################
+PYENV_ROOT=~/.pyenv
+export PATH=$PATH:$PYENV_ROOT/bin
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+

@@ -297,10 +297,15 @@ setopt hist_reduce_blanks
 # 先頭がスペースの場合ヒストリに追加しない
 #setopt hist_ignore_space
 
-# docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/kawa_xxx/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+# peco
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
 #########################
 # その他

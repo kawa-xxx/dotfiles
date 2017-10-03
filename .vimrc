@@ -72,7 +72,10 @@ set hlsearch
 " ターミナルでもマウスを使用できる用にする
 set mouse=a
 set guioptions+=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
+
 " ESCを押すとIMEをオフにする
 set imdisable
 " undo ディレクトリを設定する

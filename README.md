@@ -1,5 +1,5 @@
 # usage
-* install zsh, git, tmux
+* install fish, git, tmux, source-highlight
 * $ git clone git@github.com:kawa-xxx/dotfiles.git
 * $ git submodule init
 * $ git submodule update

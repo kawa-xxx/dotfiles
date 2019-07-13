@@ -34,6 +34,7 @@ call dein#add("mrtazz/simplenote.vim")
 call dein#add("tpope/vim-fugitive")
 call dein#add("kana/vim-fakeclip")
 call dein#add("tpope/vim-dispatch")
+call dein#add('previm/previm')
 
 filetyp plugin indent on
 

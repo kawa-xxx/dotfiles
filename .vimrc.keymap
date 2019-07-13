@@ -43,6 +43,10 @@ nmap <Space>bO :OperaReloadStop<CR>
 nmap <Space>ba :AllBrowserReloadStart<CR>
 nmap <Space>bA :AllBrowserReloadStop<CR>
 
+"--- Previmの設定 --------------------------------------------
+let g:previm_open_cmd = 'open -a Firefox'
+
+
 "---ヤンクしたデータをクリップボードと共有する----------------
 if has('mac') && !has('gui')
     nnoremap <silent> <Space>y :.w !pbcopy<CR><CR>

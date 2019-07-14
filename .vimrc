@@ -9,13 +9,13 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 " Required:
 call dein#begin('~/.vim/dein')
 
-"--別プラグインファイルを読み込む
-if filereadable(expand('~/.vimrc.plugin'))
-  source ~/.vimrc.plugin
-endif
+" Load toml files
+let s:toml_dir = $HOME . '/.config/nvim/dein/toml/'
+let s:toml = s:toml_dir . 'dein.toml'
+let s:lazy_toml = s:toml_dir . 'dein_lazy.toml'
 
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+call dein#load_toml(s:toml, {'lazy':0})
+call dein#load_toml(s:lazy_toml, {'lazy':1})
 
 " Required:
 call dein#end()

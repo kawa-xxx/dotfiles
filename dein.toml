@@ -1,0 +1,68 @@
+# Let dein manage dein
+# Required:
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Add or remove your plugins here:
+[[plugins]]
+repo = 'Shogo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shogo/neosnippet-snippets'
+
+# 補完関連
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache-rsense'
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+
+# 開発環境関連
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'vim-scripts/taglist.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+#[[plugins]]
+#repo = 'vim-scripts/ShowMarks7'
+
+[[plugins]]
+repo = 'vim-scripts/surround.vim'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'vim-scripts/Markdown'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'kana/vim-fakeclip'
+# これはいるのか？
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'previm/previm'
+
+[[plugins]]
+repo = 'cespare/vim-toml'

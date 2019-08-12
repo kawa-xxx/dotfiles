@@ -4,11 +4,6 @@
 repo = 'Shougo/dein.vim'
 
 # Add or remove your plugins here:
-[[plugins]]
-repo = 'Shogo/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shogo/neosnippet-snippets'
 
 # 補完関連
 [[plugins]]
@@ -30,9 +25,6 @@ repo = 'vim-scripts/taglist.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
-#[[plugins]]
-#repo = 'vim-scripts/ShowMarks7'
-
 [[plugins]]
 repo = 'vim-scripts/surround.vim'
 
@@ -53,13 +45,6 @@ repo = 'Townk/vim-autoclose'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'kana/vim-fakeclip'
-# これはいるのか？
-
-[[plugins]]
-repo = 'tpope/vim-dispatch'
 
 [[plugins]]
 repo = 'previm/previm'

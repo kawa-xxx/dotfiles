@@ -7,13 +7,14 @@ repo = 'Shougo/dein.vim'
 
 # 補完関連
 [[plugins]]
-repo = 'Shougo/neocomplcache'
+repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
-repo = 'Shougo/neocomplcache-rsense'
+repo = 'Shougo/neco-syntax'
 
 [[plugins]]
 repo = 'ujihisa/neco-look'
+#-----
 
 # 開発環境関連
 [[plugins]]

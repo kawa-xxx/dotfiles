@@ -30,19 +30,6 @@ noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru 
 "---taglistのkeymap設定------------------------------------------
 map <silent> <Leader>l :TlistToggle<CR>
 
-"---vim-browsereload-macのkeymap設定------------------------------
-let g:returnApp = "iTerm"
-nmap <Space>bc :ChromeReloadStart<CR>
-nmap <Space>bC :ChromeReloadStop<CR>
-nmap <Space>bf :FirefoxReloadStart<CR>
-nmap <Space>bF :FirefoxReloadStop<CR>
-nmap <Space>bs :SafariReloadStart<CR>
-nmap <Space>bS :SafariReloadStop<CR>
-nmap <Space>bo :OperaReloadStart<CR>
-nmap <Space>bO :OperaReloadStop<CR>
-nmap <Space>ba :AllBrowserReloadStart<CR>
-nmap <Space>bA :AllBrowserReloadStop<CR>
-
 "--- Previmの設定 --------------------------------------------
 let g:previm_open_cmd = 'open -a Firefox'
 

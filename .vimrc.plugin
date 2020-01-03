@@ -14,9 +14,6 @@ call dein#add("Shougo/neocomplcache")
 call dein#add("Shougo/neocomplcache-rsense")
 call dein#add("ujihisa/neco-look")
 
-" unite関連
-call dein#add("Shougo/unite.vim")
-call dein#add("tacroe/unite-mark")
 
 " 開発環境関連
 call dein#add("Shougo/vimshell")

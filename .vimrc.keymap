@@ -13,19 +13,22 @@ nmap <CR> o<ESC>
 " 編集中のファイルをブラウザで開く
 nmap <Leader>w :! open %<CR><CR>
 
-"---unite.vimのkeymap設定---------------------------------------
-" バッファ一覧
-noremap <C-E><C-B> :Unite buffer<CR>
-" ファイル一覧
-noremap <C-E><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
-" 最近使ったファイルの一覧
-noremap <C-E><C-R> :Unite file_mru<CR>
-" レジスタ一覧
-noremap <C-E><C-Y> :Unite -buffer-name=register register<CR>
-" ファイルとバッファ
-noremap <C-E><C-U> :Unite buffer file file_mru<CR>
-" 全部
-noremap <C-E><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+"---denite.vimのkeymap設定---------------------------------------
+if dein#tap('denite.nvim')
+  " denite 用プレフィックス
+  nmap [denite] <Nop>
+  map <Leader>u [denite]
+
+  nnoremap <silent> [denite]b :Denite buffer<CR>
+  "nnoremap <silent> [denite]c :Denite changes<CR>
+  nnoremap <silent> [denite]f :Denite file<CR>
+  nnoremap <silent> [denite]g :Denite grep<CR>
+  nnoremap <silent> [denite]h :Denite help<CR>
+  nnoremap <silent> [denite]l :Denite line<CR>
+  nnoremap <silent> [denite]t :Denite tag<CR>
+  nnoremap <silent> [denite]m :Denite file_mru<CR>
+  nnoremap <silent> [denite]u :Denite menu<CR>
+endif
 
 "---taglistのkeymap設定------------------------------------------
 map <silent> <Leader>l :TlistToggle<CR>

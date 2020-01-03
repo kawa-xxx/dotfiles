@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 
 # Add or remove your plugins here:
 
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
 # 補完関連
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'

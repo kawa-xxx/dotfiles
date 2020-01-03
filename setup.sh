@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT_FILES=(config.fish fishfile .vim .vimrc .vimrc.plugin .vimrc.keymap .gvimrc .gitconfig .tmux.conf .tmuxinator .gemrc)
+DOT_FILES=(config.fish fishfile .vim .vimrc .vimrc.plugin .vimrc.keymap .gvimrc .gitconfig .tmux.conf)
 
 for file in ${DOT_FILES[@]}
 do

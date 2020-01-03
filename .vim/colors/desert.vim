@@ -39,7 +39,7 @@ hi ModeMsg	guifg=goldenrod
 hi MoreMsg	guifg=SeaGreen
 hi NonText	guifg=LightBlue guibg=grey30
 hi Question	guifg=springgreen
-hi Search	guibg=peru guifg=wheat
+hi Search	guibg=blue guifg=black
 hi SpecialKey	guifg=yellowgreen
 hi StatusLine	guibg=#c2bfa5 guifg=black gui=none
 hi StatusLineNC	guibg=#c2bfa5 guifg=grey50 gui=none
@@ -71,7 +71,7 @@ hi NonText       cterm=bold ctermfg=darkblue
 hi Directory     ctermfg=darkcyan
 hi ErrorMsg      cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch     cterm=NONE ctermfg=yellow ctermbg=green
-hi Search        cterm=NONE ctermfg=grey ctermbg=blue
+hi Search        cterm=NONE ctermfg=black ctermbg=blue
 hi MoreMsg       ctermfg=darkgreen
 hi ModeMsg       cterm=NONE ctermfg=brown
 hi LineNr        ctermfg=3

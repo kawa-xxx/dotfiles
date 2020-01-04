@@ -19,3 +19,12 @@ function code
   set location "$PWD/$argv"
   open -n -b "com.microsoft.VSCode" --args $location
 end
+
+# nodebrew setting
+set -x PATH $HOME/.nodebrew/current/bin $PATH
+set -x PATH ./node_modules/.bin $PATH
+
+# goenv setting
+set -x GOPATH $HOME/.goenv
+set -x PATH $PATH $GOPATH/bin
+goenv init - | source

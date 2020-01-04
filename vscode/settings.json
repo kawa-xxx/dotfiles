@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.fontSize": 16,
+    "terminal.external.osxExec": "iTerm.app",
+    "vim.useSystemClipboard": true,
+    "vim.whichwrap": "h,l,<,>,[,]",
+    "window.zoomLevel": 0,
+    "python.jediEnabled": false,
+    "editor.wordWrap": "on"
+}

@@ -10,3 +10,8 @@
 * patched font
     * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
 
+## vscode
+```
+$ cd vscode
+$ sh restore.sh
+```

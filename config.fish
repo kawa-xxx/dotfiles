@@ -1,7 +1,3 @@
-function fish_user_key_bindings
-  bind \cr 'peco_select_history (commandline -b)'
-end
-
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'

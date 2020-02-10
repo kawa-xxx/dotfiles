@@ -4,13 +4,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('~/.vim/dein')
+call dein#begin('~/.cache/dein')
 
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 " Load toml files
-let s:toml_dir = $HOME . '/.config/nvim/dein/toml/'
+
+let s:toml_dir = $HOME . '/.config/nvim/'
 let s:toml = s:toml_dir . 'dein.toml'
 let s:lazy_toml = s:toml_dir . 'dein_lazy.toml'
 

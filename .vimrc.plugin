@@ -10,9 +10,12 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " 補完関連
-call dein#add("Shougo/neocomplcache")
-call dein#add("Shougo/neocomplcache-rsense")
-call dein#add("ujihisa/neco-look")
+call dein#add('Shougo/deoplete.nvim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
 
 
 " 開発環境関連

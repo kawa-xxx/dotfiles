@@ -22,8 +22,9 @@
 * patched font
   * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
 
-* pyenv install 3.6.10
-* pip install --usr neovim #要チェック
+* $ pyenv install 3.6.10
+* $ pyenv global 3.6.10
+* $ pip install neovim
 
 ## Font のインストール
 $ git clone https://github.com/powerline/fonts.git

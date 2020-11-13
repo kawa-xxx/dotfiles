@@ -16,20 +16,25 @@
 * $ fisher
 
 ## Vim のセットアップ
+* $ mkdir .cache
 * $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-* $ sh ./installer.sh {specify the installation director
+* $ sh ./installer.sh .cache
 * vim :call dein#install()
-* patched font
-  * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
 
-* $ pyenv install 3.6.10
-* $ pyenv global 3.6.10
+* $ pyenv install 3.7.9
+* $ pyenv global 3.7.9
 * $ pip install neovim
+
+## tmux のセットアップ
+* $ pip install powerline-status
 
 ## Font のインストール
 $ git clone https://github.com/powerline/fonts.git
 $ cd fonts
 $ ./install.sh
+
+$ brew tap homebrew/cask-fonts
+$ brew cask install font-hackgen-nerd
 
 ## vscode のセットアップ
 ```

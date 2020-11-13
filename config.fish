@@ -10,6 +10,7 @@ set __fish_git_prompt_color_upstream_behind red
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh  %s'
 export LESS='-R'
 export LANG='en_US.UTF-8'
+#export LC_ALL='en_US.UTF-8'
 
 # fzf options
 export FZF_DEFAULT_OPTS='--reverse --border'

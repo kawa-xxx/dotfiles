@@ -1,11 +1,11 @@
 # usage
-* install fish, git, tmux, pyenv, fzf
-* only mac
-  * brew install reattach-to-user-namespace
 
 ## Deploy the config files
 * $ git clone git@github.com:kawa-xxx/dotfiles.git
 * $ setup.sh
+
+## Instal form Homebrew
+* $ brew bundle install
 
 ## Change shell
 * $ sudo vim /etc/shells に fish を追記する
@@ -32,9 +32,6 @@
 $ git clone https://github.com/powerline/fonts.git
 $ cd fonts
 $ ./install.sh
-
-$ brew tap homebrew/cask-fonts
-$ brew cask install font-hackgen-nerd
 
 ## vscode のセットアップ
 ```

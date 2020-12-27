@@ -2,6 +2,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "universal-ctags/universal-ctags"
+
 brew "fish"
 brew "fzf"
 brew "git"
@@ -11,6 +13,8 @@ brew "pyenv"
 brew "sl"
 brew "tig"
 brew "tmux"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+
 cask "1password"
 cask "alfred"
 cask "burp-suite"

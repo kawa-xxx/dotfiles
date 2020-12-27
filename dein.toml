@@ -24,7 +24,7 @@ repo = 'ujihisa/neco-look'
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
-repo = 'vim-scripts/taglist.vim'
+repo = 'preservim/tagbar'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'

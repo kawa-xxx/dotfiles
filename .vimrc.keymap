@@ -30,8 +30,8 @@ if dein#tap('denite.nvim')
   nnoremap <silent> [denite]u :Denite menu<CR>
 endif
 
-"---taglistのkeymap設定------------------------------------------
-map <silent> <Leader>l :TlistToggle<CR>
+"---tagberのkeymap設定------------------------------------------
+map <silent> <Leader>l :TagbarToggle<CR>
 
 "--- Previmの設定 --------------------------------------------
 let g:previm_open_cmd = 'open -a Firefox'

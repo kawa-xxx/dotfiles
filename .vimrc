@@ -139,13 +139,6 @@ let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
 
 let g:node_usejscomplete = 1
 
-"---taglist-----------------------------------------------------
-set tags=tags
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
-let Tlist_Use_Right_Window = 1 "右側に表示する
-let Tlist_Show_One_File = 1 "現在編集中のソースのタグしか表示しない
-let Tlist_Exit_OnlyWiindow = 1 "taglist が最後のウインドウなら vim を閉じる
-"let Tlist_Enable_Fold_Column = 1 " 折り畳み
 
 "--- deoplete の設定 -------------------------------------------
 let g:deoplete#enable_at_startup = 1

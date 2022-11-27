@@ -9,10 +9,19 @@ done
 
 FISH_CONFIGS=(config.fish fishfile)
 
+if [ ! -d $HOME/.config/fish ]; then
+  mkdir $HOME/.config/fish
+fi
+
 for file in ${FISH_CONFIGS[@]}
 do
   ln -s $HOME/dotfiles/$file $HOME/.config/fish/$file
 done
+
+
+if [ ! -d $HOME/.config/nvim ]; then
+  mkdir $HOME/.config/nvim
+fi
 
 # nvim configs
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim

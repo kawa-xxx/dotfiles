@@ -21,15 +21,15 @@
 * $ sh ./installer.sh .cache
 * vim :call dein#install()
 
-* $ pyenv install 3.7.9
-* $ pyenv global 3.7.9
+* $ pyenv install 3.10.8
+* $ pyenv global 3.10.8
 * $ pip install neovim
 
 ## tmux のセットアップ
 * $ pip install powerline-status
 
 ## Font のインストール
-$ git clone https://github.com/powerline/fonts.git
-$ cd fonts
-$ ./install.sh
-
+- $ git clone https://github.com/powerline/fonts.git
+- $ cd fonts
+- $ ./install.sh
+- ターミナルのフォントをパワーラインのものに変更する
